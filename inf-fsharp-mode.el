@@ -44,7 +44,8 @@
                                                   (getenv "ProgramFiles")
                                                   "C:\\Program Files (x86)")))))
            (searchdirs (--map (concat programfiles it)
-                                '("Microsoft SDKs/F#/3.1/Framework/v4.0"
+                                '("Microsoft SDKs/F#/4.0/Framework/v4.0"
+                                  "Microsoft SDKs/F#/3.1/Framework/v4.0"
                                   "Microsoft SDKs/F#/3.0/Framework/v4.0")))
            (exec-path (append searchdirs exec-path)))
     (concat "\"" (executable-find "fsi.exe") "\"")))

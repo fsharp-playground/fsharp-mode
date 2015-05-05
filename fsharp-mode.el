@@ -285,7 +285,7 @@ Otherwise, treat as a stand-alone file."
     (cond
      (makefile          compile-command)
      (proj              (concat fsharp-build-command " /nologo " proj))
-     ((equal ext "fs")  (concat fsharp-compile-command " --nologo " file))
+     ((equal ext "fs")  (concat "\"" fsharp-compile-command "\"" " --nologo " file))
      ((equal ext "fsl") (concat "fslex "  file))
      ((equal ext "fsy") (concat "fsyacc " file))
      (t                 compile-command))))
